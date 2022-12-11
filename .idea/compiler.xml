@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="borodinra" />
+        <module name="Final_labs_project" />
+        <module name="Borodin_lab" />
+        <module name="borodins_lab" />
+        <module name="JavaFinalProject" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="FinalJavaProject" target="18" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
