@@ -3,6 +3,7 @@ package bank.service;
 import bank.entity.*;
 import bank.exceptions.*;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -22,5 +23,7 @@ public interface UserService {
                       LocalDate startDate, Integer countMonth, PaymentAccountService payAcc,
                       CreditAccountService creditAcc) throws CreditExtension, BadUserRatingException,
             PayAccUserException, UserBankException, CredAccUserException;
+    void saveToFile(String fileName, BankService bank) throws IOException;
+    void updateFromFile(String fileName) throws IOException;
     void changeWork(String newWork, Double newMonthSalary);
 }
