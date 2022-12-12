@@ -4,9 +4,12 @@ import bank.exceptions.*;
 
 import java.io.IOException;
 import java.util.Scanner;
+
 import bank.service.impl.*;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
+
 import bank.entity.Employee;
 import bank.entity.BankOffice;
 import bank.service.BankService;
@@ -161,7 +164,7 @@ public class Main {
                 BankOfficeServiceImpl bankOfficeService = new BankOfficeServiceImpl();
                 bankOfficeService.create(i_2 + i_1, String.format("office_№%d", i_2), bankService.getBank(),
                         String.format("address_%d", i_2), StatusOffice.Work, 15000.0);
-                bankOfficeService.addMoney(bankService.getBank().getMoney()/3);
+                bankOfficeService.addMoney(bankService.getBank().getMoney() / 3);
                 for (int i_3 = 0; i_3 < 5; i_3++) {
                     EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
                     employeeService.create(i_3 + 5 * i_2 + 3 * i_1, String.format("Ivan_%d", i_3 + 5 * i_2
@@ -215,10 +218,9 @@ public class Main {
         System.out.println("\nПредложенные банки:");
         for (int i = 0; i < banksWithMoney.size(); i++) {
             if (i != 0) {
-                System.out.printf("\nБанк №%d%n", i+1);
-            }
-            else {
-                System.out.printf("Банк №%d%n", i+1);
+                System.out.printf("\nБанк №%d%n", i + 1);
+            } else {
+                System.out.printf("Банк №%d%n", i + 1);
             }
             System.out.println(banksWithMoney.get(i).getBank());
         }
@@ -229,10 +231,9 @@ public class Main {
         System.out.println("\nПредложенные банковские офисы:");
         for (int i = 0; i < workBank.getBank().getOffices().size(); i++) {
             if (i != 0) {
-                System.out.printf("\nОфис №%d%n", i+1);
-            }
-            else {
-                System.out.printf("Офис №%d%n", i+1);
+                System.out.printf("\nОфис №%d%n", i + 1);
+            } else {
+                System.out.printf("Офис №%d%n", i + 1);
             }
             System.out.println(workBank.getBank().getOffices().get(i));
         }
@@ -243,17 +244,15 @@ public class Main {
         System.out.println("\nПредложенные сотрудники:");
         for (int i = 0; i < workOffice.getEmployees().size(); i++) {
             if (i != 0) {
-                System.out.printf("\nСотрудник №%d%n", i+1);
-            }
-            else {
-                System.out.printf("Сотрудник №%d%n", i+1);
+                System.out.printf("\nСотрудник №%d%n", i + 1);
+            } else {
+                System.out.printf("Сотрудник №%d%n", i + 1);
             }
             System.out.printf("id %d%n", workOffice.getEmployees().get(i).getId());
             System.out.printf("Имя %s", workOffice.getEmployees().get(i).getName());
             if (workOffice.getEmployees().get(i).getCanLend()) {
                 System.out.println("\nМожет выдавать кредиты");
-            }
-            else {
+            } else {
                 System.out.println("\nНе может выдавать кредиты");
             }
         }
@@ -281,7 +280,7 @@ public class Main {
                 BankOfficeServiceImpl bankOfficeService = new BankOfficeServiceImpl();
                 bankOfficeService.create(i_2 + i_1, String.format("office_№%d", i_2), bankService.getBank(),
                         String.format("address_%d", i_2), StatusOffice.Work, 15000.0);
-                bankOfficeService.addMoney(bankService.getBank().getMoney()/3);
+                bankOfficeService.addMoney(bankService.getBank().getMoney() / 3);
                 for (int i_3 = 0; i_3 < 5; i_3++) {
                     EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
                     employeeService.create(i_3 + 5 * i_2 + 3 * i_1, String.format("Ivan_%d", i_3 + 5 * i_2
@@ -338,8 +337,7 @@ public class Main {
     }
 
     public static void main(String[] args) throws CredAccUserException, PayAccUserException, OfficeBankException,
-            AtmBankException, EmployeeBankException, UserBankException, AtmOfficeException, EmployeeOfficeException,
-            CreditExtension, BadUserRatingException {
+            AtmBankException, EmployeeBankException, UserBankException, AtmOfficeException, EmployeeOfficeException {
         export_to_txt();
     }
 }
