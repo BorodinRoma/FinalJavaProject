@@ -13,7 +13,7 @@ import bank.entity.enums.StatusATM;
 import bank.entity.enums.StatusOffice;
 
 public class Main {
-    static void mainLab_1() {
+    static void initial_first() {
         //Bank
         System.out.println("Bank:");
         BankServiceImpl bankService = new BankServiceImpl();
@@ -66,7 +66,7 @@ public class Main {
         System.out.println(creditAccountService.getCreditAcc());
     }
 
-    static void mainLab_2() throws CredAccUserException, PayAccUserException, OfficeBankException, AtmBankException,
+    static void initial_all() throws CredAccUserException, PayAccUserException, OfficeBankException, AtmBankException,
             EmployeeBankException, UserBankException, AtmOfficeException, EmployeeOfficeException {
         ArrayList<BankServiceImpl> banks = new ArrayList<>();
         ArrayList<UserServiceImpl> users = new ArrayList<>();
@@ -147,7 +147,7 @@ public class Main {
         return banksWithMoney;
     }
 
-    static void mainLab_3() throws CredAccUserException, PayAccUserException, OfficeBankException, AtmBankException,
+    static void main_logic() throws CredAccUserException, PayAccUserException, OfficeBankException, AtmBankException,
             EmployeeBankException, UserBankException, AtmOfficeException, EmployeeOfficeException, CreditExtension,
             BadUserRatingException {
         ArrayList<BankService> banks = new ArrayList<>();
@@ -271,6 +271,6 @@ public class Main {
     public static void main(String[] args) throws CredAccUserException, PayAccUserException, OfficeBankException,
             AtmBankException, EmployeeBankException, UserBankException, AtmOfficeException, EmployeeOfficeException,
             CreditExtension, BadUserRatingException {
-        mainLab_3();
+        main_logic();
     }
 }
