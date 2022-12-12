@@ -46,7 +46,7 @@ public class Main {
         //User
         System.out.println("\n\nUser:");
         UserServiceImpl userService = new UserServiceImpl();
-        userService.create(1, "Maxim", "Maximovich", LocalDate.of(2000, 10,
+        userService.create(1, "Roma", "Romanovich", LocalDate.of(2000, 10,
                         11),
                 "work_1");
         System.out.println(userService.getUser());
@@ -96,7 +96,7 @@ public class Main {
             }
 
             UserServiceImpl userService = new UserServiceImpl();
-            userService.create(i_1, String.format("Maxim_%d", i_1), "Maximovich", LocalDate.of(2000,
+            userService.create(i_1, String.format("Roma_%d", i_1), "Romanovich", LocalDate.of(2000,
                     10, 11), String.format("work_%d", i_1));
             for (int i_2 = 0; i_2 < 2; i_2++) {
                 PaymentAccountServiceImpl paymentAccountService = new PaymentAccountServiceImpl();
@@ -181,7 +181,7 @@ public class Main {
             }
 
             UserServiceImpl userService = new UserServiceImpl();
-            userService.create(i_1, String.format("Maxim_%d", i_1), "Maximovich", LocalDate.of(2000,
+            userService.create(i_1, String.format("Roma_%d", i_1), "Romanovich", LocalDate.of(2000,
                     10, 11), String.format("work_%d", i_1));
             for (int i_2 = 0; i_2 < 2; i_2++) {
                 PaymentAccountServiceImpl paymentAccountService = new PaymentAccountServiceImpl();
